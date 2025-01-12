@@ -1,5 +1,5 @@
 name: "DDclient for Home Assistant"
-version: "0.0.1"
+version: "0.0.2"
 slug: "ddclient"
 description: "A dynamic DNS client for multiple providers"
 arch:
