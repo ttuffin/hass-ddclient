@@ -10,21 +10,9 @@ arch:
 startup: "services"
 boot: "auto"
 options:
-  ddclient_conf: |
-    # Paste your ddclient.conf content here.
-    # Example:
-    # daemon=300
-    # syslog=yes
-    # ssl=yes
-    # protocol=dyndns2
-    # use=web
-    # server=dynamicdns.example.com
-    # login=your_username
-    # password=your_password
-    # yourdomain.com
+  ddclient_conf: "# Input your ddclient conf here"
 schema:
-  ddclient_conf:
-    type: str
+  ddclient_conf: str
 environment:
   DDCLIENT_CONF: "{options.ddclient_conf}"
 
