@@ -1,16 +1,25 @@
 name: "DDclient for Home Assistant"
-version: "0.0.2"
+version: "0.0.3"
 slug: "ddclient"
 description: "A dynamic DNS client for multiple providers"
 arch:
   - "amd64"
-  - "armv7"
-  - "armhf"
   - "aarch64"
 startup: "services"
 boot: "auto"
 options:
-  ddclient_conf: "# Input your ddclient conf here"
+  ddclient_conf: |
+    # Paste your ddclient.conf content here.
+    # Example:
+    daemon=300
+    syslog=yes
+    ssl=yes
+    protocol=dyndns2
+    use=web
+    server=dynamicdns.example.com
+    login=your_username
+    password=your_password
+    yourdomain.com
 schema:
   ddclient_conf: str
 environment:
