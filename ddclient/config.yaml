@@ -1,0 +1,18 @@
+name: "DDclient for Home Assistant"
+version: "1.0.0"
+slug: "ddclient"
+description: "A dynamic DNS client for multiple providers"
+arch:
+  - "amd64"
+  - "armv7"
+  - "armhf"
+  - "aarch64"
+startup: "services"
+boot: "auto"
+options:
+  ddclient_conf: "# Place your entire ddclient.conf here"
+schema:
+  ddclient_conf:
+    type: "str"
+environment:
+  DDCLIENT_CONF: "{options.ddclient_conf}"
